@@ -1,0 +1,5 @@
+The Concurrency error is raised in the BasicGame program when adding the Array clearing function because of how terribly created the program is (this is my doing)
+
+The error here is due to the fact that Jmonkey has the Update process on a threaded system, And all of my 'Mainline' were placed here (Admitiedly due to my rushing to complete), When I attempt to remove something from any of the arrays, there will be a concurrency error as while the removal process is Syncronized, the rest of the method isn't and the Arrays will access the same object multiple times (This doesn't happen immediately, but it happens almost directly after launch).
+
+If I were to fix this, I would need to be more careful about the Adding, Removal, Viewing and Operations on these arrays, Splitting them into synchronized Functions (even though they would likely call off of one another)

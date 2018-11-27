@@ -1,0 +1,57 @@
+#Time between Days
+/*
+because if the amount of days between the starting date of the appointment and the queried date evenly divides into the period, you can guarantee that appointment is happening that day
+if it's any other number that means it's that amount of days off
+given this solution requires you to have an operator- specified for dates but I'm pretty sure it would wor
+*/
+
+if(0 <= period)
+    // just check if it's this date
+else
+    occursToday = (0 == (StartDate - QueryDate).days % period)
+
+# For Periodicity
+
+/*
+assuming periodicity is an int within the Appointment class or structure, which specifies the amount of days between repeats of this appointment
+and that code would of course cover all positive N periodicities of days, effectively covering one-time, daily and weekly visits, in addition to any type of visit frequency you could specify with an amount of days
+*/
+
+Date QueriedDate; // probably passed into the function as a Date& or something
+for(Appointment &currAppt : Appointments)
+{
+    bool happensonthisday = false;
+    if(0 == currAppt.periodicity)
+        happensonthisday = (currAppt.date == QueriedDate);
+    else
+        happensonthisday = (0 == abs((currAppt.date - QueriedDate).getDay())%currAppt.periodicity);
+}
+
+@The rawr also a cheeky optimization for searching the books would be keep the book in ascending order as it aggregates appointments and then when you're given a date you isolate a chunk of dates that are valid simply by finding the latest date in the book that's earlier than it
+
+
+https://flylib.com/books/en/4.444.1.196/1/
+
+
+it's probably a Switch that contains an instance of Switchable (like a Light), so for example you'd initialize a switch by giving it a light: new Switch(new Light())
+
+Factory Builder:
+
+Factory<T, K> * ptr{
+	 Factory<T,K>::Instance();
+}
+
+
+Factory needs a Creator callback
+
+T * mkObj(){
+	return new Obj{};
+}
+
+To create from Factory:
+
+factoryPtr->Create(K);
+
+
+Days between
+int totaldays = day + (month*daysinmonth) + (year*daysinyear);

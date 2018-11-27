@@ -1,0 +1,26 @@
+#
+# Push YOUR project back into YOUR repository
+#
+#
+
+# tell git who you are...
+git config --global user.name "w0123456"
+git config --global user.email "w0123456@nscc.ca"
+# if you use --global, you won't need to type this command again
+
+
+# init the directory as a git repo
+touch .gitignore
+git init
+
+# add all files
+git add .
+
+# commit current files
+git commit -m "Initial commit"
+
+# push to your repo on the git server
+# your premade repo has you as owner (rwe) and teachers can read
+git remote add origin w0123456@172.16.176.5:/git/w0123456
+git push origin master
+

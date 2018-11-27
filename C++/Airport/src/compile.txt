@@ -1,0 +1,6 @@
+To compile this file use G++; Anything past > is command line Anything with <> wrap is replacable
+
+>g++ -o <filename> *.cpp
+
+to run:
+>./<filename>

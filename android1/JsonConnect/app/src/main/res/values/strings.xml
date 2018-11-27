@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JsonConnect</string>
+    <string name="Request_Joke">Get a Joke</string>
+</resources>

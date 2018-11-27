@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"></android.support.v7.widget.Toolbar>
+
+    <!-- MapView layout and initial basemap and extent. -->
+
+    <com.esri.android.map.MapView
+        android:id="@+id/map"
+        mapoptions.MapType="Topo"
+        mapoptions.ZoomLevel="13"
+        mapoptions.center="44.885, -65.168"
+        android:layout_width="fill_parent"
+        android:layout_height="561dp" />
+
+</LinearLayout>

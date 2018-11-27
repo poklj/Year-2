@@ -1,0 +1,49 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2018-11-21 15:16:10 #1 store] 
+Database 'C:\Users\Zach-Win\Desktop\w0414043\Prog2200\A6 - Objectdb\BasicGame\VehicleDB.odb' is opened by 14708@DESKTOP-FFSHNUQ
+
+[2018-11-21 15:16:10 #2 store] 
+Configuration path: C:\Users\Zach-Win\Desktop\w0414043\Prog2200\A6 - Objectdb\ObjectDb\objectdb-2.7.6\objectdb.conf
+
+[2018-11-21 15:16:10 #3 type] 
+Type mygame.Vehicle is not enhanced.
+
+[2018-11-21 15:16:10 #4 type] 
+Type mygame.LandVehicle is not enhanced.
+
+[2018-11-21 15:16:10 #5 type] 
+Type mygame.AirVehicle is not enhanced.
+
+[2018-11-21 15:16:10 #6 type] 
+Type mygame.Motorcycle is not enhanced.
+
+[2018-11-21 15:16:10 #7 type] 
+Type mygame.SAM is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2018-11-21 15:16:21 #1 store] 
+Database 'C:\Users\Zach-Win\Desktop\w0414043\Prog2200\A6 - Objectdb\BasicGame\VehicleDB.odb' has been recovered (tr. 43-62)
+
+[2018-11-21 15:16:21 #2 store] 
+Database 'C:\Users\Zach-Win\Desktop\w0414043\Prog2200\A6 - Objectdb\BasicGame\VehicleDB.odb' is opened by 10456@DESKTOP-FFSHNUQ
+
+[2018-11-21 15:16:21 #3 store] 
+Configuration path: C:\Users\Zach-Win\Desktop\w0414043\Prog2200\A6 - Objectdb\ObjectDb\objectdb-2.7.6\objectdb.conf
+
+[2018-11-21 15:16:21 #4 type] 
+Type mygame.Vehicle is not enhanced.
+
+[2018-11-21 15:16:21 #5 type] 
+Type mygame.LandVehicle is not enhanced.
+
+[2018-11-21 15:16:21 #6 type] 
+Type mygame.AirVehicle is not enhanced.
+
+[2018-11-21 15:16:21 #7 type] 
+Type mygame.Motorcycle is not enhanced.
+
+[2018-11-21 15:16:21 #8 type] 
+Type mygame.SAM is not enhanced.
+

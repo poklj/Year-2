@@ -1,0 +1,10 @@
+
+git commands to "refresh" local clone repo from server:
+ - git fetch origin   # get from remote to local
+ - git reset --hard origin/master  # go get the files
+ - git clean -f -d    # remove "extra" or untracked file/dirs
+ -
+
+Nice graphic showing git transport commands
+http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch
+

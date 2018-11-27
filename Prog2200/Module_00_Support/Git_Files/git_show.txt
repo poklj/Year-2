@@ -1,0 +1,138 @@
+
+git commands to show status:
+ - git log
+ - git show-branch
+ - git show
+ - git status -v
+ - git --help
+ - git status
+
+==================================
+$ git log
+commit 267d58db4ce2009d035285a07c11019878fb20ff
+Author: w0000000 <w0000000@nscc.ca>
+Date:   Sat Nov 5 13:49:07 2016 -0300
+
+    commit 3
+
+commit b7ad33291725117edd165ae9e9f88d3014901616
+Author: w0000000 <w0000000@nscc.ca>
+Date:   Sat Nov 5 13:42:50 2016 -0300
+
+    commit 2
+
+commit f7e220f4f099f2e129f718057cb4488d888a947a
+Author: w0000000 <w0000000@nscc.ca>
+Date:   Sat Nov 5 13:14:42 2016 -0300
+
+    initial commit
+==================================
+$ git show-branch
+[master] commit 3
+
+==================================
+$ git show
+commit 267d58db4ce2009d035285a07c11019878fb20ff
+Author: w0000000 <w0000000@nscc.ca>
+Date:   Sat Nov 5 13:49:07 2016 -0300
+
+    commit 3
+
+diff --git a/test/gitpush_2nd_time.txt b/test/gitpush_2nd_time.txt
+new file mode 100644
+index 0000000..4f5b5fb
+--- /dev/null
++++ b/test/gitpush_2nd_time.txt
+@@ -0,0 +1,26 @@
++#
++# Push YOUR project back into YOUR repository
++#  2nd time, some commands are redundant...commented out
++#
++
++# tell git who you are...
++#git config --global user.name "w0123456"
++#git config --global user.email "w0123456@nscc.ca"
++# if you use --global, you won't need to type this command again
++
++
++# init the directory as a git repo
++#touch .gitignore
++#git init
++
++# add all files, make sure new files are added, do this at top
++git add .
++
++# commit current files
++git commit -m "Changed blah-blah-blah"
++
++# push to your repo on the git server
++# your premade repo has you as owner (rwe) and teachers can read
++#git remote add origin w0123456@172.16.176.5:/git/w0123456
++git push origin master
++
+
+==================================
+$ git status -v
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test/gitshow.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+==================================
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+==================================
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   test/gitpush_2nd_time.txt
+        new file:   test/gitshow.txt
+        new file:   test/gitupdate.txt

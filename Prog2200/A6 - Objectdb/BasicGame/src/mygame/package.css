@@ -1,0 +1,12 @@
+table{
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+table > tbody > tr > td{
+    
+    border: 1px black solid;
+}
+table > tbody > tr > th{
+    
+    border: 1px black solid;
+}

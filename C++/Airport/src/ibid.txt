@@ -1,0 +1,11 @@
+Any line starting with > is a Command to be executed in your Command line
+Anything surrounded by <> is a replacable. I.E: <filename> should be replaced with a file name
+
+To compile this file follow the instructions in compile.txt
+
+To run this file:
+>./<filename>
+replace <filename> with the filename you gave the compile command
+
+What to expect:
+The output of this program is pure text, Runnable in the command line and IDE's.

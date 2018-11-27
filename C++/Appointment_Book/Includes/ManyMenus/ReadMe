@@ -1,0 +1,23 @@
+
+Our attempt to create reusable menu progressed slowly... 
+Here are the 5 versions developed, allegedly getting better and better;) 
+
+Menu: This version uses Menu composed of MenuItems, each storing a string to be displayed and a function (pointer) implementing the desired action. 
+Questions: Should the Menu destructor deallocate MenuItem objects? (hard to say...)
+
+Menu2: Similar to the above, but functions are replaced by functors.
+An abstract class called "Runnable", from which all Menu actions must be derived, ensures that the function call operator is implemented in the concrete classes representing menu actions. 
+The Menu itself is not Runnable here. 
+Questions: Should the Menu destructor deallocate MenuItem objects? (here:Y) 
+	   How about Runnable objects? (here: N)
+
+Menu3: Not much different from Menu2, but Menu is now Runnable, allowing for easy creation of submenus. The same questions remain, but is addressed differently:
+Questions: Should the Menu destructor deallocate MenuItem objects? (here:Y)
+           How about Runnable objects? (here: Y)
+
+Menu4: While explicit creation of MenuItems to be added to a Menu may have some educational value, it is a nuisance, and leaves us with the question of who is responsible for their destruction.  
+In this version, MenuItems are created by the addItem method of the Menu (note that the signature of this method has changed!). Now, there is no doubt who should destroy MenuItems; and we also chose to destroy any Runnable objects when their MenuItems are deconstructed. 
+
+Menu5: Reviewing the implementation of Menu4, one may doubt whether or not anyone but the Menu needs to know about MenuItem. Indeed, defining MenuItem locally, in the Menu class sound better... 
+
+Menu6: No, I didn't do it...   You try ;)

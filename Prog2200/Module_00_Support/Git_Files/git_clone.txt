@@ -1,0 +1,13 @@
+#
+# pull file from get server
+#
+
+git clone w0123456@172.16.176.5:/git/PROG2200
+
+git clone w0123456@172.16.176.5:/git/Android
+
+#
+# where:
+#  - w0123456 is YOUR student number
+#  - PROG2200 is YOUR class
+#

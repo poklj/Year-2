@@ -1,0 +1,18 @@
+
+Well, as we are missing Thursday's, all try to put down some hints here.
+
+
+First, review "Classes, objects and relationships between classes" at the top of Topic 3. We will not use inheritance in this assignment, but associations, aggregations and compositions will be the glue holding our application pieces together. 
+
+Also, think/read about static data members and static methods. You will not use this directly, but the 2 patterns I introduce (Singleton and Monostate, implemented as Rand and Timer classes) take advantage of static memory allocation. 
+
+
+Our design goal is a program with a number of cooperating objects, instantiating our well defined, inter-related, and "clean" Classes. 
+
+Quite often students started with simple version, without the Airport class and with only one Runway. In this approach the main() runs the discrete time loop, advancing the time by one unit per cycle (calling Timer's tick()), and allowing every "player" to do it's job, if any, at this particular time.
+
+While thinking about time, try to appreciate how the use of Timer monostate simplifies the program, and eliminates the need for time argument in every call:
+Simply, any class whose object need to be aware of time are to be given a timer object (they "have" a Timer data member - yes, that's composition), and they can check time at will calling time(). 
+The use of Delay's objects to getDelay() will be analogous. 
+
+Would you like to know what classes would be, in my opinion, needed? Ask me! 

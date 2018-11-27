@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "http://java.sun.com/dtd/jdo_1_0.dtd">
+
+<jdo>
+    <package name="objectdb_jdo_05">
+        <class name="Shape" />
+        <class name="Square" />
+        <class name="Triangle" />
+    </package>
+    <package name="java.awt">
+        <class name="Color" />
+    </package>
+</jdo>

@@ -1,0 +1,39 @@
+#
+# ignore these files
+#
+*target*
+*.war
+*.ear
+*.class
+
+#
+#  Don't ignore these libraries
+#
+!/lib/*
+
+# eclipse specific git ignore 
+# ...but leave projects intact for other users
+# *.pydevproject
+#.project
+#.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+# local.properties
+# .classpath
+# .settings/
+.loadpath
+.recommenders
+
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+/.metadata/

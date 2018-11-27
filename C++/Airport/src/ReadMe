@@ -1,0 +1,24 @@
+
+Classes provided: 
+
+Timer - simulated time source; the usage will been demonstrated in class
+
+Rand - generates double numbers uniformly distributed over (0,1] 
+       (drand() -  used by Delay()); 
+       or [0,1] (drand0() - used by Shift() - not in the Airport assignment)
+
+Delay - generates exponentially distributed random numbers (integers)
+	Use it to generate delays (gaps between planes, or runway service time).
+
+
+Queue - while you may use your own Queue, I encourage you to thoroughly review 
+        the three versions provided here: 
+	1. simple fixed-size, circular buffer-based Queue i
+	   (Queue.h & Queue.cpp)
+	2. circular buffer-based, dynamically allocated, Queue Template 
+           (CBQueueT.h)
+	3. circular linked list-based Queue Template
+	   (CLLQueueT.h)
+
+Stat  - well, these are some older pieces/experiments; some like them, some don't, 
+Stats   them confusing, hard to use, or useless...  ;(  

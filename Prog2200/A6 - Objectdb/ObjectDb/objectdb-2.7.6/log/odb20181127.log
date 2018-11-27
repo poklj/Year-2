@@ -1,0 +1,26 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2018-11-27 15:54:09 #1 store] 
+Database 'C:\Users\Zach-Win\Desktop\w0414043\Prog2200\A6 - Objectdb\BasicGame\VehicleDB.odb' has been recovered (tr. 63-82)
+
+[2018-11-27 15:54:09 #2 store] 
+Database 'C:\Users\Zach-Win\Desktop\w0414043\Prog2200\A6 - Objectdb\BasicGame\VehicleDB.odb' is opened by 216@DESKTOP-FFSHNUQ
+
+[2018-11-27 15:54:09 #3 store] 
+Configuration path: C:\Users\Zach-Win\Desktop\w0414043\Prog2200\A6 - Objectdb\ObjectDb\objectdb-2.7.6\objectdb.conf
+
+[2018-11-27 15:54:10 #4 type] 
+Type mygame.Vehicle is not enhanced.
+
+[2018-11-27 15:54:10 #5 type] 
+Type mygame.LandVehicle is not enhanced.
+
+[2018-11-27 15:54:10 #6 type] 
+Type mygame.AirVehicle is not enhanced.
+
+[2018-11-27 15:54:10 #7 type] 
+Type mygame.Motorcycle is not enhanced.
+
+[2018-11-27 15:54:10 #8 type] 
+Type mygame.SAM is not enhanced.
+

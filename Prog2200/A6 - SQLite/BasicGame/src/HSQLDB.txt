@@ -1,0 +1,41 @@
+title HSQLDB
+
+participant Main Game
+participant Connection
+participant Serial{Vehicle}
+
+Main Game->*Serial{Vehicle}: Construct()
+Main Game->*Connection: Construct()
+activate Connection
+==Read Vehicles==
+participant grabFullArray
+
+Main Game->*grabFullArray:Construct()
+
+Main Game->Connection: Execute(grabFullArray)
+
+Connection->grabFullArray:SyncConnection(conn)
+activate grabFullArray
+
+participant QueryHandler
+grabFullArray->*QueryHandler: Construct(conn)
+Connection->grabFullArray:Action()
+grabFullArray->QueryHandler:PushtoBuffer()
+grabFullArray->QueryHandler: Execute()
+activate QueryHandler
+grabFullArray<--QueryHandler:result
+deactivate QueryHandler
+Main Game<--grabFullArray: ResultSet
+deactivate grabFullArray
+
+activate Main Game
+space 
+activate Main Game
+Main Game->Serial{Vehicle}: Decodify(Result)
+activate Serial{Vehicle}
+
+Main Game<--Serial{Vehicle}: Vehicle Object
+
+Main Game->Main Game:For each(ResultSet) Create Vehicles
+deactivate Main Game
+

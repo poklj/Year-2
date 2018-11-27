@@ -1,0 +1,7 @@
+
+git mirror ... copy the remote repo:
+
+1) git clone --mirror origin-url  # clone as a "mirror"
+2) git remote update   # rebuild mirror, same as delete + re-clone
+
+==================================

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Simple User Interface</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="edit_message">OwO, Send a message</string>
+    <string name="button_send">Lolol, Send Zach</string>
+    <string name="title_activity_display_message">uwu, I broke your message</string>
+
+    <string name="hello_world">Hello world!</string>
+
+</resources>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="package.css"/>
+    </head>
+	<body>
+               
+		<h1>A JMonkey Project Implementing the Vehicles assignment and extended to use a 3d UI</h1>
+		<hr/>
+			
+		<p>Below is the SOLID table required to be completed made into a HTML compatable format</p>
+		
+		<table>
+			 <tr>
+			 	<th> Acronym </th>
+			 	<th> Concept </th>
+			 	<th> My Application of this concept </th>
+			 </tr>
+			 <tr>
+			 	<td>S  SRP</td>
+			 	<td> Single responsibility principle </td>
+			 	<td>Single Responsibility principle was implemented as much as possible, The failings I've encountered implementing this however do show up in the code, Mainly the Main line. This failing is caused by rushed deadlines. The fix to this issue would be to split up a lot of the Mainline garbage and move it to separate functions, adhering to SRP principles</td>
+			 </tr>
+			 <tr>
+			 	<td>O  OCP</td>
+			 	<td>Open/closed principle</td>
+                                <td>This concept is implemented well in this code, as A large amount of the Code is using an "Abstracted" Overriding pattern, Where an Object only needs to override it's Baseclasses main functions and spool into it's own modified methods rather then depend on it's superclasses definitions</td>
+			 </tr>
+			 <tr>
+			 	<td>L  LSP</td>
+			 	<td>Liskov substitution principle</td>
+			 	<td>This is Demonstrated by the use of Generic lists, Specifically the Vehicles and Geometry, All of the Vehicles used are of a subclass to Vehicle, This allows all Objects to be interchangable and even defaulted while still working</td>
+			 </tr> 
+			 <tr>
+				<td>I  ISP</td>
+				<td>Interface segregation principle</td>
+				<td>This Was not shown within this Code for multiple reasons, First no interfaces are used, Second, The interfaces which were created for the interfaces assignment were bloated, to fix this we would need to split the Interfaces into Unique but Distinct pieces that only contain dependant functions to run the intended meaning of the interface</td>
+			 </tr>
+			 <tr>
+			 	<td>D  DIP</td>
+			 	<td>Dependency inversion principle</td>
+			 	<td>This is shown in this code on how the Main line does not depend on a Single vehicle type, rather the specific vehicle subtype relies on it's superclass (Vehicle) to serve the mainline. </td>
+			 </tr>
+         </table>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+/*
+ * mainM.cpp
+ *
+ *  Created on: 04-Nov-2013
+ *      Author: piotr
+ */
+
+#include <cstdlib>
+#include "Menu.h"
+#include "Systime.h"
+#include "Banner.h"
+
+
+using namespace std;
+
+int main()
+{
+	Menu X("Main Menu5");
+	Menu * y;
+
+	/*
+         * The version of Menu used here destroyes its MenuItems
+         * and all "action" objects are also to be destroyed
+	 * when the Menu and the MenuItems are gone.
+         */
+
+	// Also: addItem has changed! 
+
+	X.addItem("Show time", new Systime );
+	X.addItem("Showtime", new Banner );
+	X.addItem("Nice Try", new Banner("Time4tea"));
+	X.addItem("Sub", y=new Menu("SubMenu2"));
+	y->addItem("Nice SubTry", new Banner("Time to WORK"));
+	y->addItem("More SubTry", new Banner("Time to Sleep"));
+
+	X();
+
+	/*
+	 *  And if you dislike the use of "y" above then you may try this
+	 *  (may look more "organized"):
+         */
+		
+	Menu * M(new Menu("*** Main Menu5 Again ***"));
+	Menu * S(new Menu("SubMenu5"));
+
+	S->addItem("Nice SubTry", new Banner("Time to WORK"));
+	S->addItem("More SubTry", new Banner("Time to Sleep"));
+	M->addItem("Show time", new Systime );
+	M->addItem("Showtime", new Banner );
+	M->addItem("Nice Try", new Banner("Time4tea"));
+	M->addItem("Sub", S);
+		
+	(*M)();
+
+	// One may ask whether or not "M->()" would work. 
+	// No, it would NOT; but "M->operator()()" would. Explain.
+
+	return 0;
+
+}
+
+

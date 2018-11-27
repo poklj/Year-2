@@ -1,0 +1,116 @@
+
+title HSQLDB-Sequence
+
+participant Main Game
+participant Connection
+participant Serial{Vehicle}
+
+Main Game->*Serial{Vehicle}: Construct()
+Main Game->*Connection: Construct()
+activate Connection
+==Read Vehicles==
+participant grabFullArray
+
+Main Game->*grabFullArray:Construct()
+
+Main Game->Connection: Execute(grabFullArray)
+
+Connection->grabFullArray:SyncConnection(conn)
+activate grabFullArray
+
+participant QueryHandler
+grabFullArray->*QueryHandler: Construct(conn)
+Connection->grabFullArray:Action()
+grabFullArray->QueryHandler:PushtoBuffer()
+grabFullArray->QueryHandler: Execute()
+activate QueryHandler
+grabFullArray<--QueryHandler:result
+deactivate QueryHandler
+Main Game<--grabFullArray: ResultSet
+deactivate grabFullArray
+
+activate Main Game
+space 
+activate Main Game
+Main Game->Serial{Vehicle}: Decodify(Result)
+activate Serial{Vehicle}
+
+Main Game<--Serial{Vehicle}: Vehicle Object
+deactivate Serial{Vehicle}
+Main Game->Main Game:For each(ResultSet) Create Vehicles
+deactivate Main Game
+
+==Write Vehicles==
+participant CreateVehicle
+
+participant DropVehicleTable
+participant CreateVehicleTable
+participant UpdateHandler
+
+Main Game->*DropVehicleTable: Construct()
+DropVehicleTable->*UpdateHandler: Construct()
+Main Game->*CreateVehicleTable: Construct()
+CreateVehicleTable->*UpdateHandler:
+Main Game->Connection:Execute(DropVehicleTable)
+
+activate Connection
+Connection->DropVehicleTable: Sync Connection(conn)
+Connection->DropVehicleTable: Action()
+
+
+activate DropVehicleTable
+
+DropVehicleTable->UpdateHandler:PushtoBuffer()
+
+DropVehicleTable->UpdateHandler: Execute()
+activate UpdateHandler
+space
+deactivate UpdateHandler
+deactivate Connection
+deactivate DropVehicleTable
+
+Main Game->*CreateVehicle:
+
+activate Connection
+Connection->CreateVehicleTable: Sync Connection(conn)
+Connection->CreateVehicleTable: Action()
+
+
+activate CreateVehicleTable
+
+CreateVehicleTable->UpdateHandler:PushtoBuffer()
+
+CreateVehicleTable->UpdateHandler: Execute()
+activate UpdateHandler
+space
+deactivate UpdateHandler
+deactivate Connection
+deactivate CreateVehicleTable
+
+
+
+
+activate UpdateHandler
+space
+deactivate UpdateHandler
+
+Main Game->Main Game:for each vehicle
+
+activate Main Game
+Main Game->Serial{Vehicle}: CodifyVehicle(vehicle)
+activate Serial{Vehicle}
+Main Game<--Serial{Vehicle}:byte[]
+Main Game->CreateVehicle: SyncByteArray(byte[])
+Main Game->CreateVehicle: SyncID(id)
+
+Main Game->Connection: Execute(CreateVehicle)
+Connection->CreateVehicle: SyncConnection(Conn)
+Connection->CreateVehicle: Action()
+activate CreateVehicle
+space 
+activate CreateVehicle
+CreateVehicle->CreateVehicle: Prepared Statement
+deactivate CreateVehicle
+deactivate CreateVehicle
+
+

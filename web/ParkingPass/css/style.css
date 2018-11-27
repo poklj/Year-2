@@ -1,0 +1,58 @@
+/*
+Purpose: Main Level CSS
+Author:Zachary Higgs
+Date: 10/10/2018
+*/
+.Heading{
+    text-align: center;
+}
+#Ddate{
+    margin-left: auto;
+    margin-right: -50%;
+}
+form{
+    display: block;
+    text-align: center;
+    clear: both;
+}
+p{
+    margin-left: -15%;
+}
+#pContact{
+    margin-left: -50%;
+}
+#Pass{
+    margin-left: -35%;
+    margin-top: 2%;
+}
+#infoButt{
+    display:block;
+    margin-right: 25%;
+}
+#offButt{
+    display:block;
+    float:right;
+    margin-right: 25%;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border: black 2px solid;
+    border-collapse: collapse;
+}
+caption{
+    text-align: left;
+    margin-top: 2%;
+}
+tr >td {
+    border: grey 1px solid;
+}
+tr > td > input {
+    height: 100%;
+    border-width: 0px;
+}
+input[type="radio"]{
+    
+}
+
+
